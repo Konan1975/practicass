@@ -4,69 +4,65 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Evolución del HTML</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-    body { background: #f9f9f9; color: #333; line-height: 1.6; }
-    header {
-      background: #2c3e50; color: white; padding: 2rem 1rem; text-align: center;
-    }
-    nav {
-      background: #2c3e50; padding: 0.8rem;
-    }
-    nav ul {
-      list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;
-    }
-    nav a {
-      color: #ecf0f1; text-decoration: none; font-weight: 500; padding: 0.4rem 0.8rem;
-      border-radius: 4px; transition: background 0.3s;
-    }
-    nav a:hover {
-      background: #34495e;
-    }
-    main {
-      max-width: 900px; margin: 2rem auto; padding: 0 1.5rem;
-    }
-    section {
-      background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-    h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
-    h2 { color: #2c3e50; margin: 1.2rem 0 0.8rem; }
-    img {
-      max-width: 100%; height: auto; margin: 1rem 0;
-      border: 1px solid #ddd; border-radius: 6px;
-    }
-    footer {
-      text-align: center; padding: 1.5rem; color: #7f8c8d; font-size: 0.9rem;
-      border-top: 1px solid #eee; margin-top: 2rem;
-    }
+    body { background-color: #f8f9fa; }
+    .hero { background: linear-gradient(135deg, #3498db, #2c3e50); color: white; }
+    footer { background-color: #343a40; color: #adb5bd; }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Evolución del HTML</h1>
-    <p>De HTML 1.0 a HTML5: un viaje tecnológico</p>
-  </header>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="evolucion.html">Línea del tiempo</a></li>
-      <li><a href="comparacion.html">Etiquetas: antes y ahora</a></li>
-      <li><a href="ventajas.html">Ventajas de HTML5</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">HTML5</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="evolucion.html">Línea del tiempo</a></li>
+          <li class="nav-item"><a class="nav-link" href="comparacion.html">Etiquetas</a></li>
+          <li class="nav-item"><a class="nav-link" href="ventajas.html">Ventajas</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
-  <main>
-    <section>
-      <h2>Bienvenido</h2>
-      <p>Este sitio explora la evolución del lenguaje de marcado HTML, desde sus inicios hasta la versión moderna HTML5. Aprenderás cómo ha mejorado la semántica, accesibilidad y potencia multimedia del desarrollo web.</p>
-      <img src="img/html5.png" alt="Logo de HTML5" width="200">
-    </section>
+  <header class="hero py-5">
+    <div class="container text-center">
+      <h1 class="display-4">Evolución del HTML</h1>
+      <p class="lead">De HTML 1.0 a HTML5: un viaje tecnológico</p>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h2 class="card-title">Bienvenido</h2>
+            <p class="card-text">
+              Este sitio explora la evolución del lenguaje de marcado HTML, desde sus inicios hasta la versión moderna HTML5. 
+              Aprenderás cómo ha mejorado la semántica, accesibilidad y potencia multimedia del desarrollo web.
+            </p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" 
+                 alt="Logo de HTML5" class="img-fluid mt-3" style="max-width: 200px;">
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
-  <footer>
-    <p>&copy; 2025 – Proyecto Educativo UTPL | Tema: Evolución del HTML</p>
+  <footer class="py-4 bg-dark text-light">
+    <div class="container text-center">
+      <p class="mb-0">&copy; 2025 – Proyecto Educativo UTPL | Tema: Evolución del HTML</p>
+    </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

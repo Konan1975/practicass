@@ -4,88 +4,83 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ventajas de HTML5</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-    body { background: #f9f9f9; color: #333; line-height: 1.6; }
-    header {
-      background: #2c3e50; color: white; padding: 2rem 1rem; text-align: center;
-    }
-    nav {
-      background: #2c3e50; padding: 0.8rem;
-    }
-    nav ul {
-      list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;
-    }
-    nav a {
-      color: #ecf0f1; text-decoration: none; font-weight: 500; padding: 0.4rem 0.8rem;
-      border-radius: 4px; transition: background 0.3s;
-    }
-    nav a:hover {
-      background: #34495e;
-    }
-    main {
-      max-width: 900px; margin: 2rem auto; padding: 0 1.5rem;
-    }
-    section {
-      background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-    h1 { font-size: 2rem; margin-bottom: 1rem; }
-    h2 { color: #2c3e50; margin: 1.2rem 0 0.8rem; }
-    h3 { color: #3498db; margin: 1rem 0 0.5rem; }
-    article { margin-bottom: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid #eee; }
-    article:last-child { border-bottom: none; margin-bottom: 0; }
-    footer {
-      text-align: center; padding: 1.5rem; color: #7f8c8d; font-size: 0.9rem;
-      border-top: 1px solid #eee; margin-top: 2rem;
-    }
-    code {
-      background: #eee; padding: 0.2rem 0.4rem; border-radius: 3px;
-    }
+    body { background-color: #f8f9fa; }
+    footer { background-color: #343a40; color: #adb5bd; }
+    code { background: #f1f1f1; padding: 0.2em 0.4em; border-radius: 4px; }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Ventajas de HTML5</h1>
-  </header>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="evolucion.html">Línea del tiempo</a></li>
-      <li><a href="comparacion.html">Etiquetas: antes y ahora</a></li>
-      <li><a href="ventajas.html">Ventajas de HTML5</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">HTML5</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="evolucion.html">Línea del tiempo</a></li>
+          <li class="nav-item"><a class="nav-link" href="comparacion.html">Etiquetas</a></li>
+          <li class="nav-item"><a class="nav-link active" href="ventajas.html">Ventajas</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
-  <main>
-    <section>
-      <h2>¿Por qué HTML5 es mejor?</h2>
-      <article>
-        <h3>1. Semántica clara</h3>
-        <p>Etiquetas como <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code> y <code>&lt;nav&gt;</code> describen el contenido, mejorando SEO y accesibilidad.</p>
-      </article>
-      <article>
-        <h3>2. Multimedia sin plugins</h3>
-        <p>Soporte nativo con <code>&lt;video&gt;</code> y <code>&lt;audio&gt;</code> — adiós a Flash.</p>
-      </article>
-      <article>
-        <h3>3. Almacenamiento local</h3>
-        <p><code>localStorage</code> y <code>sessionStorage</code> permiten guardar datos en el navegador.</p>
-      </article>
-      <article>
-        <h3>4. APIs modernas</h3>
-        <p>Geolocalización, canvas, arrastrar y soltar, notificaciones, etc.</p>
-      </article>
-      <article>
-        <h3>5. Compatibilidad móvil</h3>
-        <p>Diseño responsivo integrado desde la base.</p>
-      </article>
-    </section>
+  <header class="bg-info text-white py-4">
+    <div class="container">
+      <h1 class="display-5">Ventajas de HTML5</h1>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h3 class="card-title text-primary">1. Semántica clara</h3>
+            <p>Etiquetas como <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code> y <code>&lt;nav&gt;</code> describen el contenido.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h3 class="card-title text-primary">2. Multimedia nativa</h3>
+            <p>Soporte con <code>&lt;video&gt;</code> y <code>&lt;audio&gt;</code> — sin Flash.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h3 class="card-title text-primary">3. Almacenamiento local</h3>
+            <p><code>localStorage</code> y <code>sessionStorage</code> permiten guardar datos en el navegador.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h3 class="card-title text-primary">4. APIs modernas</h3>
+            <p>Geolocalización, canvas, drag & drop, notificaciones, etc.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
-  <footer>
-    <p>&copy; 2025 – Proyecto Educativo UTPL</p>
+  <footer class="py-4 bg-dark text-light">
+    <div class="container text-center">
+      <p class="mb-0">&copy; 2025 – Proyecto Educativo UTPL</p>
+    </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

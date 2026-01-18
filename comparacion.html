@@ -3,108 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Etiquetas Obsoletas vs. Modernas</title>
+  <title>Etiquetas Obsoletas vs Modernas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-    body { background: #f9f9f9; color: #333; line-height: 1.6; }
-    header {
-      background: #2c3e50; color: white; padding: 2rem 1rem; text-align: center;
-    }
-    nav {
-      background: #2c3e50; padding: 0.8rem;
-    }
-    nav ul {
-      list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;
-    }
-    nav a {
-      color: #ecf0f1; text-decoration: none; font-weight: 500; padding: 0.4rem 0.8rem;
-      border-radius: 4px; transition: background 0.3s;
-    }
-    nav a:hover {
-      background: #34495e;
-    }
-    main {
-      max-width: 900px; margin: 2rem auto; padding: 0 1.5rem;
-    }
-    section {
-      background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-    h1 { font-size: 2rem; margin-bottom: 1rem; }
-    h2 { color: #2c3e50; margin: 1.2rem 0 0.8rem; }
-    table {
-      width: 100%; border-collapse: collapse; margin-top: 1rem;
-    }
-    th, td {
-      padding: 0.8rem; text-align: left; border: 1px solid #ddd;
-    }
-    th {
-      background: #3498db; color: white;
-    }
-    tr:nth-child(even) {
-      background: #f2f2f2;
-    }
-    code {
-      background: #eee; padding: 0.2rem 0.4rem; border-radius: 3px;
-    }
-    footer {
-      text-align: center; padding: 1.5rem; color: #7f8c8d; font-size: 0.9rem;
-      border-top: 1px solid #eee; margin-top: 2rem;
-    }
+    body { background-color: #f8f9fa; }
+    footer { background-color: #343a40; color: #adb5bd; }
+    code { background: #f1f1f1; padding: 0.2em 0.4em; border-radius: 4px; }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Etiquetas: Antes y Ahora</h1>
-  </header>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="evolucion.html">Línea del tiempo</a></li>
-      <li><a href="comparacion.html">Etiquetas: antes y ahora</a></li>
-      <li><a href="ventajas.html">Ventajas de HTML5</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">HTML5</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="evolucion.html">Línea del tiempo</a></li>
+          <li class="nav-item"><a class="nav-link active" href="comparacion.html">Etiquetas</a></li>
+          <li class="nav-item"><a class="nav-link" href="ventajas.html">Ventajas</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
-  <main>
-    <section>
-      <h2>Comparación de etiquetas</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Obsoletas (HTML 4)</th>
-            <th>Modernas (HTML5)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><code>&lt;font&gt;</code></td>
-            <td>CSS (estilos externos)</td>
-          </tr>
-          <tr>
-            <td><code>&lt;center&gt;</code></td>
-            <td><code>&lt;div&gt;</code> + CSS</td>
-          </tr>
-          <tr>
-            <td><code>&lt;frame&gt;, &lt;frameset&gt;</code></td>
-            <td><code>&lt;iframe&gt;</code> o diseño responsivo</td>
-          </tr>
-          <tr>
-            <td><code>&lt;b&gt;, &lt;i&gt;</code> (sin semántica)</td>
-            <td><code>&lt;strong&gt;, &lt;em&gt;</code> o <code>&lt;mark&gt;</code></td>
-          </tr>
-          <tr>
-            <td><code>&lt;div id="header"&gt;</code></td>
-            <td><code>&lt;header&gt;</code></td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+  <header class="bg-success text-white py-4">
+    <div class="container">
+      <h1 class="display-5">Etiquetas: Antes y Ahora</h1>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <div class="row">
+      <div class="col-12">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h2 class="card-title mb-4">Comparación de etiquetas</h2>
+            <div class="table-responsive">
+              <table class="table table-bordered table-striped">
+                <thead class="table-dark">
+                  <tr>
+                    <th>Obsoletas (HTML 4)</th>
+                    <th>Modernas (HTML5)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><code>&lt;font&gt;</code></td><td>CSS</td></tr>
+                  <tr><td><code>&lt;center&gt;</code></td><td><code>&lt;div&gt;</code> + CSS</td></tr>
+                  <tr><td><code>&lt;frame&gt;</code></td><td>Diseño responsivo o <code>&lt;iframe&gt;</code></td></tr>
+                  <tr><td><code>&lt;b&gt;, &lt;i&gt;</code></td><td><code>&lt;strong&gt;, &lt;em&gt;, &lt;mark&gt;</code></td></tr>
+                  <tr><td><code>&lt;div id="header"&gt;</code></td><td><code>&lt;header&gt;</code></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
-  <footer>
-    <p>&copy; 2025 – Proyecto Educativo UTPL</p>
+  <footer class="py-4 bg-dark text-light">
+    <div class="container text-center">
+      <p class="mb-0">&copy; 2025 – Proyecto Educativo UTPL</p>
+    </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -4,89 +4,72 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contacto</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-    body { background: #f9f9f9; color: #333; line-height: 1.6; }
-    header {
-      background: #2c3e50; color: white; padding: 2rem 1rem; text-align: center;
-    }
-    nav {
-      background: #2c3e50; padding: 0.8rem;
-    }
-    nav ul {
-      list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;
-    }
-    nav a {
-      color: #ecf0f1; text-decoration: none; font-weight: 500; padding: 0.4rem 0.8rem;
-      border-radius: 4px; transition: background 0.3s;
-    }
-    nav a:hover {
-      background: #34495e;
-    }
-    main {
-      max-width: 900px; margin: 2rem auto; padding: 0 1.5rem;
-    }
-    section {
-      background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-    h1 { font-size: 2rem; margin-bottom: 1rem; }
-    h2 { color: #2c3e50; margin: 1.2rem 0 0.8rem; }
-    form { margin-top: 1rem; }
-    label {
-      display: block; margin-top: 1rem; font-weight: 600;
-    }
-    input, textarea {
-      width: 100%; padding: 0.6rem; margin-top: 0.3rem; border: 1px solid #ccc; border-radius: 4px;
-      font-family: inherit;
-    }
-    button {
-      background: #3498db; color: white; padding: 0.6rem 1.5rem; border: none;
-      border-radius: 4px; font-size: 1rem; margin-top: 1.2rem; cursor: pointer;
-    }
-    button:hover {
-      background: #2980b9;
-    }
-    footer {
-      text-align: center; padding: 1.5rem; color: #7f8c8d; font-size: 0.9rem;
-      border-top: 1px solid #eee; margin-top: 2rem;
-    }
+    body { background-color: #f8f9fa; }
+    footer { background-color: #343a40; color: #adb5bd; }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Contacto</h1>
-  </header>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="evolucion.html">Línea del tiempo</a></li>
-      <li><a href="comparacion.html">Etiquetas: antes y ahora</a></li>
-      <li><a href="ventajas.html">Ventajas de HTML5</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">HTML5</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="evolucion.html">Línea del tiempo</a></li>
+          <li class="nav-item"><a class="nav-link" href="comparacion.html">Etiquetas</a></li>
+          <li class="nav-item"><a class="nav-link" href="ventajas.html">Ventajas</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
-  <main>
-    <section>
-      <h2>¿Tienes preguntas?</h2>
-      <form action="#" method="get">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
+  <header class="bg-warning text-dark py-4">
+    <div class="container">
+      <h1 class="display-5">Contacto</h1>
+    </div>
+  </header>
 
-        <label for="email">Correo:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
+  <main class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h2 class="card-title mb-4">¿Tienes preguntas?</h2>
+            <form>
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
-  <footer>
-    <p>&copy; 2025 – Proyecto Educativo UTPL</p>
+  <footer class="py-4 bg-dark text-light">
+    <div class="container text-center">
+      <p class="mb-0">&copy; 2025 – Proyecto Educativo UTPL</p>
+    </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
