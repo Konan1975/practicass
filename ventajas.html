@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Evolución del HTML</title>
+  <title>Ventajas de HTML5</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
     body { background: #f9f9f9; color: #333; line-height: 1.6; }
@@ -29,22 +29,23 @@
     section {
       background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
-    h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+    h1 { font-size: 2rem; margin-bottom: 1rem; }
     h2 { color: #2c3e50; margin: 1.2rem 0 0.8rem; }
-    img {
-      max-width: 100%; height: auto; margin: 1rem 0;
-      border: 1px solid #ddd; border-radius: 6px;
-    }
+    h3 { color: #3498db; margin: 1rem 0 0.5rem; }
+    article { margin-bottom: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid #eee; }
+    article:last-child { border-bottom: none; margin-bottom: 0; }
     footer {
       text-align: center; padding: 1.5rem; color: #7f8c8d; font-size: 0.9rem;
       border-top: 1px solid #eee; margin-top: 2rem;
+    }
+    code {
+      background: #eee; padding: 0.2rem 0.4rem; border-radius: 3px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Evolución del HTML</h1>
-    <p>De HTML 1.0 a HTML5: un viaje tecnológico</p>
+    <h1>Ventajas de HTML5</h1>
   </header>
 
   <nav>
@@ -59,14 +60,32 @@
 
   <main>
     <section>
-      <h2>Bienvenido</h2>
-      <p>Este sitio explora la evolución del lenguaje de marcado HTML, desde sus inicios hasta la versión moderna HTML5. Aprenderás cómo ha mejorado la semántica, accesibilidad y potencia multimedia del desarrollo web.</p>
-      <img src="img/html5.png" alt="Logo de HTML5" width="200">
+      <h2>¿Por qué HTML5 es mejor?</h2>
+      <article>
+        <h3>1. Semántica clara</h3>
+        <p>Etiquetas como <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code> y <code>&lt;nav&gt;</code> describen el contenido, mejorando SEO y accesibilidad.</p>
+      </article>
+      <article>
+        <h3>2. Multimedia sin plugins</h3>
+        <p>Soporte nativo con <code>&lt;video&gt;</code> y <code>&lt;audio&gt;</code> — adiós a Flash.</p>
+      </article>
+      <article>
+        <h3>3. Almacenamiento local</h3>
+        <p><code>localStorage</code> y <code>sessionStorage</code> permiten guardar datos en el navegador.</p>
+      </article>
+      <article>
+        <h3>4. APIs modernas</h3>
+        <p>Geolocalización, canvas, arrastrar y soltar, notificaciones, etc.</p>
+      </article>
+      <article>
+        <h3>5. Compatibilidad móvil</h3>
+        <p>Diseño responsivo integrado desde la base.</p>
+      </article>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 – Proyecto Educativo UTPL | Tema: Evolución del HTML</p>
+    <p>&copy; 2025 – Proyecto Educativo UTPL</p>
   </footer>
 </body>
 </html>

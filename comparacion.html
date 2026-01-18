@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Evolución del HTML</title>
+  <title>Etiquetas Obsoletas vs. Modernas</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
     body { background: #f9f9f9; color: #333; line-height: 1.6; }
@@ -29,11 +29,22 @@
     section {
       background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
-    h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+    h1 { font-size: 2rem; margin-bottom: 1rem; }
     h2 { color: #2c3e50; margin: 1.2rem 0 0.8rem; }
-    img {
-      max-width: 100%; height: auto; margin: 1rem 0;
-      border: 1px solid #ddd; border-radius: 6px;
+    table {
+      width: 100%; border-collapse: collapse; margin-top: 1rem;
+    }
+    th, td {
+      padding: 0.8rem; text-align: left; border: 1px solid #ddd;
+    }
+    th {
+      background: #3498db; color: white;
+    }
+    tr:nth-child(even) {
+      background: #f2f2f2;
+    }
+    code {
+      background: #eee; padding: 0.2rem 0.4rem; border-radius: 3px;
     }
     footer {
       text-align: center; padding: 1.5rem; color: #7f8c8d; font-size: 0.9rem;
@@ -43,8 +54,7 @@
 </head>
 <body>
   <header>
-    <h1>Evolución del HTML</h1>
-    <p>De HTML 1.0 a HTML5: un viaje tecnológico</p>
+    <h1>Etiquetas: Antes y Ahora</h1>
   </header>
 
   <nav>
@@ -59,14 +69,42 @@
 
   <main>
     <section>
-      <h2>Bienvenido</h2>
-      <p>Este sitio explora la evolución del lenguaje de marcado HTML, desde sus inicios hasta la versión moderna HTML5. Aprenderás cómo ha mejorado la semántica, accesibilidad y potencia multimedia del desarrollo web.</p>
-      <img src="img/html5.png" alt="Logo de HTML5" width="200">
+      <h2>Comparación de etiquetas</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Obsoletas (HTML 4)</th>
+            <th>Modernas (HTML5)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>&lt;font&gt;</code></td>
+            <td>CSS (estilos externos)</td>
+          </tr>
+          <tr>
+            <td><code>&lt;center&gt;</code></td>
+            <td><code>&lt;div&gt;</code> + CSS</td>
+          </tr>
+          <tr>
+            <td><code>&lt;frame&gt;, &lt;frameset&gt;</code></td>
+            <td><code>&lt;iframe&gt;</code> o diseño responsivo</td>
+          </tr>
+          <tr>
+            <td><code>&lt;b&gt;, &lt;i&gt;</code> (sin semántica)</td>
+            <td><code>&lt;strong&gt;, &lt;em&gt;</code> o <code>&lt;mark&gt;</code></td>
+          </tr>
+          <tr>
+            <td><code>&lt;div id="header"&gt;</code></td>
+            <td><code>&lt;header&gt;</code></td>
+          </tr>
+        </tbody>
+      </table>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 – Proyecto Educativo UTPL | Tema: Evolución del HTML</p>
+    <p>&copy; 2025 – Proyecto Educativo UTPL</p>
   </footer>
 </body>
 </html>
