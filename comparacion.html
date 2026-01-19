@@ -7,16 +7,17 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <style>
-    body { background-color: #f8f9fa; }
-    footer { background-color: #343a40; color: #adb5bd; }
-    code { background: #f1f1f1; padding: 0.2em 0.4em; border-radius: 4px; }
+    body { background-color: #f9f9f9; }
+    footer { background-color: #212529; color: #adb5bd; }
+    code { background: #f1f1f1; padding: 0.2em 0.4em; border-radius: 4px; font-size: 0.95em; }
+    .table th { background: #0d6efd; color: white; }
   </style>
 </head>
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="index.html">HTML5</a>
+      <a class="navbar-brand fw-bold" href="index.html">HTML5</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -34,32 +35,53 @@
 
   <header class="bg-success text-white py-4">
     <div class="container">
-      <h1 class="display-5">Etiquetas: Antes y Ahora</h1>
+      <h1 class="display-5 fw-bold">Etiquetas: Antes y Ahora</h1>
     </div>
   </header>
 
   <main class="container my-5">
+    <div class="alert alert-info">
+      <i class="bi bi-info-circle me-2"></i>
+      HTML4 dependía de <code>&lt;div&gt;</code> sin significado y de Flash para multimedia. HTML5 introduce semántica y capacidades nativas.
+    </div>
+
     <div class="row">
       <div class="col-12">
         <div class="card shadow-sm">
           <div class="card-body">
-            <h2 class="card-title mb-4">Comparación de etiquetas</h2>
+            <h2 class="card-title mb-4">Comparación detallada</h2>
             <div class="table-responsive">
-              <table class="table table-bordered table-striped">
-                <thead class="table-dark">
+              <table class="table table-bordered">
+                <thead>
                   <tr>
-                    <th>Obsoletas (HTML 4)</th>
-                    <th>Modernas (HTML5)</th>
+                    <th>HTML 4 / XHTML (Obsoleto)</th>
+                    <th>HTML5 (Moderno)</th>
+                    <th>Propósito</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td><code>&lt;font&gt;</code></td><td>CSS</td></tr>
-                  <tr><td><code>&lt;center&gt;</code></td><td><code>&lt;div&gt;</code> + CSS</td></tr>
-                  <tr><td><code>&lt;frame&gt;</code></td><td>Diseño responsivo o <code>&lt;iframe&gt;</code></td></tr>
-                  <tr><td><code>&lt;b&gt;, &lt;i&gt;</code></td><td><code>&lt;strong&gt;, &lt;em&gt;, &lt;mark&gt;</code></td></tr>
-                  <tr><td><code>&lt;div id="header"&gt;</code></td><td><code>&lt;header&gt;</code></td></tr>
+                  <tr><td><code>&lt;font&gt;</code></td><td>CSS</td><td>Estilos visuales</td></tr>
+                  <tr><td><code>&lt;center&gt;</code></td><td>CSS + Flex/Grid</td><td>Alineación</td></tr>
+                  <tr><td><code>&lt;acronym&gt;</code></td><td><code>&lt;abbr&gt;</code></td><td>Abreviaturas</td></tr>
+                  <tr><td><code>&lt;applet&gt;</code></td><td><code>&lt;object&gt;</code> o <code>&lt;embed&gt;</code></td><td>Contenido interactivo</td></tr>
+                  <tr><td><code>&lt;div id="header"&gt;</code></td><td><code>&lt;header&gt;</code></td><td>Semántica clara</td></tr>
+                  <tr><td>Flash para video/audio</td><td><code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code></td><td>Multimedia nativa</td></tr>
                 </tbody>
               </table>
+            </div>
+
+            <h3 class="mt-4">Nuevas etiquetas semánticas en HTML5</h3>
+            <div class="d-flex flex-wrap gap-2 mt-2">
+              <span class="badge bg-secondary"><code>&lt;header&gt;</code></span>
+              <span class="badge bg-secondary"><code>&lt;nav&gt;</code></span>
+              <span class="badge bg-secondary"><code>&lt;main&gt;</code></span>
+              <span class="badge bg-secondary"><code>&lt;article&gt;</code></span>
+              <span class="badge bg-secondary"><code>&lt;section&gt;</code></span>
+              <span class="badge bg-secondary"><code>&lt;aside&gt;</code></span>
+              <span class="badge bg-secondary"><code>&lt;footer&gt;</code></span>
+              <span class="badge bg-secondary"><code>&lt;figure&gt;</code></span>
+              <span class="badge bg-secondary"><code>&lt;figcaption&gt;</code></span>
+              <span class="badge bg-secondary"><code>&lt;mark&gt;</code></span>
             </div>
           </div>
         </div>
