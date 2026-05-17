@@ -1,7 +1,7 @@
 <?php
 include("conexion.php");
 
-$sql = "SELECT id, nombre, apellidos, correo FROM usuarios";
+$sql = "SELECT id, cedula, nombre, correo FROM usuarios";
 $resultado = $conexion->query($sql);
 ?>
 <!DOCTYPE html>
@@ -40,26 +40,26 @@ $resultado = $conexion->query($sql);
             echo "<div class='table-responsive'>";
             echo "<table class='table table-striped table-hover table-bordered'>";
             echo "<thead class='table-dark'>";
-            echo "<tr>
-                    <th>ID</th>
-                    <th>Nombres</th>
-                    <th>Apellidos</th>
-                    <th>Correo Institucional</th>
-                    <th>Acciones</th>
-                  </tr>";
+                        echo "<tr>
+                                        <th>ID</th>
+                                        <th>Cédula</th>
+                                        <th>Nombres</th>
+                                        <th>Correo Institucional</th>
+                                        <th>Acciones</th>
+                                    </tr>";
             echo "</thead>";
             echo "<tbody>";
             
             while($fila = $resultado->fetch_assoc()){
                 $id_esc = htmlspecialchars($fila['id']);
+                $cedula_esc = htmlspecialchars($fila['cedula']);
                 $nombre_esc = htmlspecialchars($fila['nombre']);
-                $apellidos_esc = htmlspecialchars($fila['apellidos']);
                 $correo_esc = htmlspecialchars($fila['correo']);
                 
                 echo "<tr>";
                 echo "<td>{$id_esc}</td>";
+                echo "<td>{$cedula_esc}</td>";
                 echo "<td>{$nombre_esc}</td>";
-                echo "<td>{$apellidos_esc}</td>";
                 echo "<td>{$correo_esc}</td>";
                 echo "<td>
                         <a href='editar.php?id={$id_esc}' class='btn btn-sm btn-info'>Editar</a>
