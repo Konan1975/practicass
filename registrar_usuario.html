@@ -74,5 +74,25 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        (function(){
+            const form = document.querySelector('form');
+            form.addEventListener('submit', function(e){
+                const cedula = document.getElementById('cedula').value.trim();
+                const nombre = document.getElementById('nombre').value.trim();
+                const correo = document.getElementById('correo').value.trim();
+                const password = document.getElementById('password').value;
+                const errors = [];
+                if (!/^[0-9]{6,15}$/.test(cedula)) errors.push('Cédula inválida (solo dígitos, 6-15).');
+                if (nombre.length < 3) errors.push('Nombre demasiado corto.');
+                if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(correo)) errors.push('Correo inválido.');
+                if (password.length < 8) errors.push('La contraseña debe tener al menos 8 caracteres.');
+                if (errors.length) {
+                    e.preventDefault();
+                    alert('Errores:\n' + errors.join('\n'));
+                }
+            });
+        })();
+    </script>
 </body>
 </html>
