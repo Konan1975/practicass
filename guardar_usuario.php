@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('conexion.php');
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -54,6 +55,8 @@ $stmt->bind_param('ssss', $cedula, $nombre, $correo, $hashed);
 if ($stmt->execute()) {
     $stmt->close();
     $conexion->close();
+    $_SESSION['mensaje'] = 'Usuario registrado exitosamente';
+    $_SESSION['tipo'] = 'success';
     header('Location: listar_usuarios.php');
     exit;
 } else {

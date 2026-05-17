@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('conexion.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -24,6 +25,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($stmt->execute()) {
             $stmt->close();
             $conexion->close();
+            $_SESSION['mensaje'] = 'Usuario actualizado exitosamente';
+            $_SESSION['tipo'] = 'success';
             header('Location: listar_usuarios.php'); exit;
         } else {
             $error = 'Error al actualizar: ' . $stmt->error;
