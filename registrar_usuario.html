@@ -36,26 +36,26 @@
         
         <form action="guardar_usuario.php" method="POST">
             <div class="mb-3">
+                <label for="cedula" class="form-label">Cédula</label>
+                <input type="text" class="form-control" id="cedula" name="cedula"
+                       placeholder="Ingrese su cédula o identificación" required>
+            </div>
+
+            <div class="mb-3">
                 <label for="nombre" class="form-label">Nombres del Abogado/Usuario</label>
                 <input type="text" class="form-control" id="nombre" name="nombre" 
                        placeholder="Ingrese sus nombres completos" required>
             </div>
-            
-            <div class="mb-3">
-                <label for="apellidos" class="form-label">Apellidos</label>
-                <input type="text" class="form-control" id="apellidos" name="apellidos" 
-                       placeholder="Ingrese sus apellidos completos" required>
-            </div>
-            
+
             <div class="mb-3">
                 <label for="correo" class="form-label">Correo Institucional</label>
                 <input type="email" class="form-control" id="correo" name="correo" 
                        placeholder="usuario@institucion.gob.ec" required>
             </div>
-            
+
             <div class="mb-3">
-                <label for="clave" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="clave" name="clave" 
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="password" name="password" 
                        placeholder="Mínimo 8 caracteres" minlength="8" required>
                 <div class="form-text">La contraseña será encriptada para garantizar la seguridad de la información jurídica.</div>
             </div>
